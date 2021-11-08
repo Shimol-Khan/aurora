@@ -1,1 +1,13 @@
 <%= render 'shared/nav' %>
+
+<% if user_signed_in? %>
+  <div class="container">
+    <div class="row justify-content-center mt-5 text-center">
+      <div class="col-lg-5">
+        <div class="alert alert-success" role="alert">
+          <h6><i class="fas fa-hand-sparkles ms-2"></i> Welocome! <%= current_user.name %></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
